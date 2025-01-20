@@ -75,16 +75,16 @@
         </li>
 
         <li class="navbar-item">
-          <a href="about.jsp" class="navbar-link">About</a>
+          <a href="/pages/about.html" class="navbar-link">About</a>
         </li>
 
         <li class="navbar-item">
-          <a href="#" class="navbar-link">Products</a>
+          <a href="#product" class="navbar-link">Products</a>
         </li>
 
 
         <li class="navbar-item">
-          <a href="contact.jsp" class="navbar-link">Contact</a>
+          <a href="/pages/conatct.html" class="navbar-link">Contact</a>
         </li>
 
       </ul>
@@ -165,7 +165,7 @@
       - #COLLECTION
     -->
 
-    <section class="section collection">
+    <section class="section collection" id="product">
       <div class="container">
 
         <ul class="collection-list has-scrollbar">
@@ -198,7 +198,7 @@
             <div class="collection-card" style="background-image: url('./assets/images/collection-1.jpg')">
               <h3 class="h4 card-title">jewellery Collections</h3>
 
-              <a href="#" class="btn btn-secondary">
+              <a href="jewaraly.jsp" class="btn btn-secondary">
                 <span>Explore All</span>
 
                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
@@ -932,6 +932,7 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+
 
 </html>
 
