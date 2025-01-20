@@ -51,7 +51,7 @@
     <div class="overlay" data-overlay></div>
 
     <a href="#" class="logo">
-      <img src="/assets/images/logo.jpg" width="100" height="80" alt="Footcap logo">
+      <img src="./assets/images/logo.jpg" width="100" height="80" alt="Footcap logo">
     </a>
 
     <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
@@ -75,7 +75,7 @@
         </li>
 
         <li class="navbar-item">
-          <a href="/pages/about.html" class="navbar-link">About</a>
+          <a href="about.jsp" class="navbar-link">About</a>
         </li>
 
         <li class="navbar-item">
@@ -84,7 +84,7 @@
 
 
         <li class="navbar-item">
-          <a href="/pages/conatct.html" class="navbar-link">Contact</a>
+          <a href="contact.jsp" class="navbar-link">Contact</a>
         </li>
 
       </ul>
