@@ -36,7 +36,9 @@
     - preload banner
   -->
   <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+<%--
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+--%>
 
 </head>
 
@@ -177,10 +179,10 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="container m-2">
-            <form action="product" method="post" >
+            <form action="category" method="post" >
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" name="productName" id="name">
+                <input type="text" class="form-control" name="name" id="name">
               </div>
               <div class="mb-3">
                 <label for="description" class="form-label">description</label>
@@ -233,12 +235,16 @@
           <li>
             <div class="collection-card" style="background-image: url('./assets/images/collection-1.jpg')">
               <h3 class="h4 card-title">jewellery Collections</h3>
+<%--            <button class="btn " >--%>
 
-              <a href="jewaraly.jsp" class="btn btn-secondary">
-                <span>Explore All</span>
+              <a href="<%= request.getContextPath() %>/juweraly" class="btn btn-primary mb-3 text-right">
+
+              <span>Explore All</span>
 
                 <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
               </a>
+<%--            </button>--%>
+
             </div>
           </li>
 
@@ -959,7 +965,7 @@
 <!--
   - custom js link
 -->
-<script src="/assets/js/script.js"></script>
+<script src="assets/js/script.js"></script>
 <script type="text/javascript">
   // Retrieve the message from the URL query parameter
   const urlParams = new URLSearchParams(window.location.search);
@@ -976,8 +982,8 @@
 -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<%--<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>--%>
+<%--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>--%>
 
 </body>
 
