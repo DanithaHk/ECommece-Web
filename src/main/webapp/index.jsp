@@ -36,6 +36,7 @@
     - preload banner
   -->
   <link rel="preload" href="./assets/images/hero-banner.png" as="image">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 </head>
 
@@ -75,16 +76,20 @@
         </li>
 
         <li class="navbar-item">
-          <a href="/pages/about.html" class="navbar-link">About</a>
+          <a href="about.jsp" class="navbar-link">About</a>
         </li>
 
         <li class="navbar-item">
-          <a href="#product" class="navbar-link">Products</a>
+          <a href="#product" class="navbar-link">Categories</a>
         </li>
 
 
         <li class="navbar-item">
-          <a href="/pages/conatct.html" class="navbar-link">Contact</a>
+          <a href="contact.jsp" class="navbar-link">Contact</a>
+        </li>
+
+        <li class="navbar-item">
+          <a href="product.jsp" class="navbar-link">Products</a>
         </li>
 
       </ul>
@@ -100,7 +105,7 @@
         </li>
 
         <li>
-          <a href="/pages/login.html" class="nav-action-btn">
+          <a href="login.jsp" class="nav-action-btn">
             <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
             <span class="nav-action-text">Login / Register</span>
@@ -112,6 +117,15 @@
           <button class="nav-action-btn" id="btnCard">
             <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
             <data class="nav-action-text"   value="318.00">cart</data>
+
+
+          </button>
+        </li>
+        <li>
+          <button class="nav-action-btn" id="btnAddCatagory"data-bs-toggle="modal"
+                  data-bs-target="#studentModal">
+            <ion-icon name="add-outline" aria-hidden="true" ></ion-icon>
+            <data class="nav-action-text"   value="318.00">Add Category</data>
 
 
           </button>
@@ -159,7 +173,29 @@
 
 
 
-
+    <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="container m-2">
+            <form action="product" method="post" >
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" name="productName" id="name">
+              </div>
+              <div class="mb-3">
+                <label for="description" class="form-label">description</label>
+                <input type="text" class="form-control" name="description" id="description">
+              </div>
+              <div class="mb-3">
+                <label for="img" class="form-label">Attach Category Image</label>
+                <input type="file"  class="form-control" name="url" id="img" required/>
+              </div>
+              <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure Do you want to add this category?');">Add Category</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--
       - #COLLECTION
@@ -924,12 +960,24 @@
   - custom js link
 -->
 <script src="/assets/js/script.js"></script>
+<script type="text/javascript">
+  // Retrieve the message from the URL query parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const message = urlParams.get("message");
+
+  // Show an alert if the message is present
+  if (message) {
+    alert(message);
+  }
+</script>
 
 <!--
   - ionicon link
 -->
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 
 </body>
 

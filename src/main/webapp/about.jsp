@@ -73,20 +73,24 @@
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="index.jsp" class="navbar-link">Home</a>
+                    <a href="#" class="navbar-link">Home</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">About</a>
+                    <a href="about.jsp" class="navbar-link">About</a>
                 </li>
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">Products</a>
+                    <a href="#product" class="navbar-link">Categories</a>
                 </li>
 
 
                 <li class="navbar-item">
                     <a href="contact.jsp" class="navbar-link">Contact</a>
+                </li>
+
+                <li class="navbar-item">
+                    <a href="product.jsp" class="navbar-link">Products</a>
                 </li>
 
             </ul>
@@ -102,7 +106,7 @@
                 </li>
 
                 <li>
-                    <a href="#" class="nav-action-btn">
+                    <a href="login.jsp" class="nav-action-btn">
                         <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
 
                         <span class="nav-action-text">Login / Register</span>
@@ -114,6 +118,8 @@
                     <button class="nav-action-btn" id="btnCard">
                         <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
                         <data class="nav-action-text"   value="318.00">cart</data>
+
+
                     </button>
                 </li>
 

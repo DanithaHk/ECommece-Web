@@ -42,3 +42,5 @@ window.addEventListener("scroll", function () {
 btnCard.addEventListener("click",()=>{
     window.location.href="cart.jsp";
 });
+
+
