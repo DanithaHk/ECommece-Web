@@ -43,10 +43,10 @@ public class JuweralyServelete extends HttpServlet {
                 ProductDto productDto = new ProductDto(id, productName, description, quantity, price, url, catagoryId);
                 productDtoList.add(productDto);
 
-                System.out.println(productDtoList);
+
             }
             req.setAttribute("productDtoList", productDtoList);
-// Forward the request to the JSP
+            // Forward the request to the JSP
             RequestDispatcher dispatcher = req.getRequestDispatcher("jewaraly.jsp");
             dispatcher.forward(req, resp);
         } catch (SQLException e) {

@@ -1,11 +1,13 @@
 package lk.ijse.ecommeceweb.Serverlete;
 
 import jakarta.annotation.Resource;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lk.ijse.ecommeceweb.DTO.UserDto;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -57,18 +59,26 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
         String password = request.getParameter("password");
 
         System.out.println(email + password);
+        ServletContext context = getServletContext();
 
         try {
             Connection connection = dataSource.getConnection();
             PreparedStatement preparedStatement =connection.prepareStatement("SELECT * FROM users where  email =?");
             preparedStatement.setString(1,email);
             ResultSet resultSet =preparedStatement.executeQuery();
+            String dbUserId = "";
             String dbPassword ="";
             String dbEmail ="";
+            String dbName ="";
+            String dbRole ="";
+            String dbActive ="";
             while (resultSet.next()) {
+                dbUserId = resultSet.getString(1);
+                dbName = resultSet.getString(2);
                 dbEmail = resultSet.getString(3);
                 dbPassword = resultSet.getString(4);
-
+                dbRole = resultSet.getString(5);
+                dbActive = resultSet.getString(6);
 
             }
 
@@ -78,6 +88,9 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 
 
             if (dbEmail.equals(email) && dbPassword.equals(password)) {
+                UserDto user = new UserDto(dbUserId,dbName,dbEmail,dbPassword,dbRole,Boolean.parseBoolean(dbActive));
+                request.getServletContext().setAttribute("user",user);
+                System.out.println(user.getEmail());
                 String alertMessage = "User saved successfully!";
                 response.sendRedirect("index.jsp?message=" + URLEncoder.encode(alertMessage, "UTF-8"));
             } else {
