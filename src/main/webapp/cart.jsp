@@ -1,5 +1,7 @@
 <%@ page import="jakarta.annotation.Resource" %>
-<%@ page import="javax.sql.DataSource" %><%--
+<%@ page import="javax.sql.DataSource" %>
+<%@ page import="lk.ijse.ecommeceweb.DTO.CartDto" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: User
   Date: 1/20/2025
@@ -45,7 +47,14 @@
 <!--
   - #HEADER
 -->
-
+<servlet>
+  <servlet-name>Cart</servlet-name>
+  <servlet-class>lk/ijse/ecommeceweb/Serverlete/Cart.java</servlet-class>
+</servlet>
+<servlet-mapping>
+  <servlet-name>Cart</servlet-name>
+  <url-pattern>/cart.jsp</url-pattern>
+</servlet-mapping>
 <header class="header" data-header>
   <div class="container">
 
@@ -130,42 +139,39 @@
 </header>
 <main>
   <article>
+    <c:if test="${not empty alertMessage}">
+      <div class="alert-message">
+          ${alertMessage}
+      </div>
+    </c:if>
+    <%
+      List<CartDto> cartDtoList = (List<CartDto>) request.getAttribute("cartDtoList");
+      if (cartDtoList != null && !cartDtoList.isEmpty()) {
+        System.out.println(cartDtoList + "jsp");
+
+    %>
+    <%
+      for (CartDto cart : cartDtoList) {
+
+    %>
     <div class="container">
       <div class="shop">
         <div class="box">
-          <img src="./assets/images/product-11.jpg">
+          <img src="./assets/images/<%cart.getUrl();%>">
           <div class="content">
-            <h3>Women Lipsticks</h3>
+            <h3><%%>cart.getProductName();<%%></h3>
             <h4>Price: $40</h4>
-            <p class="unit">Quantity: <input name="" value="2"></p>
+            <p class="unit">Quantity: <input name="" value="<%cart.getQuantity();%>"></p>
             <button class="submit" id="btnSubmit"> Purches</button>
             <button class="delete" id="btnDelete"> Remove</button>
           </div>
         </div>
-        <div class="box">
-          <img src="./assets/images/product-13.jpg">
-          <div class="content">
-            <h3>Man's Watches</h3>
-            <h4>Price: $40</h4>
-            <p class="unit">Quantity: <input name="" value="1"></p>
-            <button class="submit" id="btnSubmit"> Purches</button>
-            <button class="delete" id="btnDelete"> Remove</button>
-          </div>
-        </div>
-        <div class="box">
-          <img src="./assets/images/product-8.jpg">
-          <div class="content">
-            <h3>Samsung Mobile</h3>
-            <h4>Price: $250</h4>
-            <p class="unit">Quantity: <input name="" value="0"></p>
-            <button class="submit" id="btnSubmit"> Purches</button>
-            <button class="delete" id="btnDelete"> Remove</button>
-          </div>
-        </div>
+
       </div>
     </div>
     </div>
-
+<%}%>
+    <%}%>
   </article>
 </main>
 <!--

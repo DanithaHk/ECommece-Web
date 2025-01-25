@@ -1,13 +1,11 @@
-<%@ page import="lk.ijse.ecommeceweb.DTO.ProductDto" %><%--
+<%--
   Created by IntelliJ IDEA.
   User: User
-  Date: 1/23/2025
-  Time: 8:01 PM
+  Date: 1/25/2025
+  Time: 10:58 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="lk.ijse.ecommeceweb.DTO.ProductDto" %>
-<%@ page import="java.util.List" %>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -87,13 +85,13 @@
                         </a>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link " href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                             <span class="ml-2">Product</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link active" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                             <span class="ml-2">users</span>
                         </a>
@@ -115,7 +113,7 @@
             <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-lg-0">
                     <div class="card">
-                        <h5 class="card-header">Products</h5>
+                        <h5 class="card-header">Users</h5>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table">
@@ -123,11 +121,11 @@
                                     <tr>
                                         <th scope="col">Id</th>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Description</th>
-                                        <th scope="col">Price</th>
+                                        <th scope="col">email</th>
+                                        <th scope="col">role</th>
                                         <th scope="col">Qty</th>
-                                        <th scope="col">Image_url</th>
-                                        <th scope="col">CategoryID</th>
+                                        <th scope="col">is_active</th>
+
                                         <th scope="col"></th>
                                     </tr>
                                     </thead>
@@ -139,7 +137,7 @@
                                         <td>€61.11</td>
                                         <td>€61.11</td>
                                         <td>€61.11</td>
-                                        <td>€61.11</td>
+
                                         <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
                                     </tr>
                                     <tr>
@@ -149,7 +147,7 @@
                                         <td>$153.11</td>
                                         <td>€61.11</td>
                                         <td>€61.11</td>
-                                        <td>€61.11</td>
+
                                         <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
                                     </tr>
                                     <tr>
@@ -159,7 +157,7 @@
                                         <td>€61.11</td>
                                         <td>€61.11</td>
                                         <td>€61.11</td>
-                                        <td>€61.11</td>
+
                                         <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
                                     </tr>
 
@@ -170,10 +168,10 @@
                         </div>
                         <button type="button" class="btn btn-primary mb-3 me-2 " data-bs-toggle="modal"
                                 data-bs-target="#studentModal">
-                            Add New Products
+                            Add New Admin
                         </button>
                         <button type="button" class="btn btn-primary mb-3 text-end" >
-                            All Products
+                            All users
                         </button>
                     </div>
                 </div>

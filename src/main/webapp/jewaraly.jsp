@@ -141,283 +141,7 @@
 
         <ul class="product-list">
 
-            <%--<li class="product-item">
-              <div class="product-card" tabindex="0">
 
-                <figure class="card-banner">
-                  <img src="./assets/images/product-9.webp" width="312" height="350" loading="lazy"
-                       alt="Running Sneaker Shoes" class="image-contain">
-
-
-
-                  <ul class="card-action-list">
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
-                        <ion-icon name="cart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
-                    </li>
-                  </ul>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Women</a>
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <p>Green Neckless</p>
-                  </h3>
-
-                  <data class="card-price" value="180.85">$180.85</data>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/product-21.jpg" width="312" height="350" loading="lazy"
-                       alt="Leather Mens Slipper" class="image-contain">
-
-                  <ul class="card-action-list">
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
-                        <ion-icon name="cart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
-                    </li>
-
-
-
-                  </ul>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Men</a>
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#"> Cotton Mens Shirt</a>
-                  </h3>
-
-                  <data class="card-price" value="190.85">$10.85</data>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/product-22.jpg" width="312" height="350" loading="lazy"
-                       alt="Simple Fabric Shoe" class="image-contain">
-
-
-
-                  <ul class="card-action-list">
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
-                        <ion-icon name="cart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
-                    </li>
-
-
-                  </ul>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-cat">
-
-                    <a href="#" class="card-cat-link">Women</a>
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Gold Neckless</a>
-                  </h3>
-
-                  <data class="card-price" value="160.85">$45.85</data>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/productRing1.webp" width=" 312" height="350" loading="lazy"
-                       alt="Air Jordan 7 Retro " class="image-contain">
-
-
-
-                  <ul class="card-action-list">
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
-                        <ion-icon name="cart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
-                    </li>
-
-
-                  </ul>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Women</a>
-
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Gold Ring</a>
-                  </h3>
-
-                  <data class="card-price" value="160.85">$60.85</data>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/product-21.jpg" width="332" height="350" loading="lazy"
-                       alt="Nike Air Max 270 SE" class="image-contain">
-
-                  <div class="card-badge">New</div>
-
-                  <ul class="card-action-list">
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
-                        <ion-icon name="cart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
-                    </li>
-
-
-                  </ul>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Women</a>
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Gold Neckless</a>
-                  </h3>
-
-                  <data class="card-price" value="120.85">$120.85</data>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/product-24.jpg" width="312" height="350" loading="lazy"
-                       alt="Adidas Sneakers Shoes" class="image-contain">
-
-                  <ul class="card-action-list">
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
-                        <ion-icon name="cart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
-                    </li>
-
-
-
-                  </ul>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Women</a>
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Gold Ring</a>
-                  </h3>
-
-                  <data class="card-price" value="100.85">$50.85</data>
-
-                </div>
-
-              </div>
-            </li>
-
-
-
-            <li class="product-item">
-              <div class="product-card" tabindex="0">
-
-                <figure class="card-banner">
-                  <img src="./assets/images/product23.jpg" width="322" height="350" loading="lazy"
-                       alt="Simple Fabric Shoe" class="image-contain">
-
-                  <ul class="card-action-list">
-
-                    <li class="card-action-item">
-                      <button class="card-action-btn" aria-labelledby="card-label-1">
-                        <ion-icon name="cart-outline"></ion-icon>
-                      </button>
-
-                      <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
-                    </li>
-
-
-                  </ul>
-                </figure>
-
-                <div class="card-content">
-
-                  <div class="card-cat">
-                    <a href="#" class="card-cat-link">Women</a>
-                  </div>
-
-                  <h3 class="h3 card-title">
-                    <a href="#">Gold Neckless</a>
-                  </h3>
-
-                  <data class="card-price" value="100.85">$35 .85</data>
-
-                </div>
-
-              </div>
-            </li>--%>
 
 
             <%
@@ -431,6 +155,7 @@
                 for (ProductDto product : productList) {
 
             %>
+
             <li class="product-item">
                 <div class="product-card" tabindex="0">
 
@@ -463,17 +188,17 @@
                             <%--==============================--%>
 
 
-                            <li class="card-action-item">
-                                <!-- Add to Cart Form -->
-                                <form action="<%= request.getContextPath() %>/addToCard" method="POST"
-                                      style="display:inline;">
-                                    <input type="hidden" name="productId" value="<%= product.getProductId() %>">
-                                    <button type="submit" class="card-action-btn" aria-labelledby="card-label-1">
-                                        <ion-icon name="cart-outline"></ion-icon>
-                                    </button>
-                                </form>
-                                <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
-                            </li>
+                                <li class="card-action-item">
+                                    <!-- Add to Cart Form -->
+                                    <form action="addToCard" method="POST" style="display:inline;">
+                                        <input type="hidden" name="productId" value="<%= product.getProductId() %>">
+                                        <input type="hidden" name="productName" value="<%= URLEncoder.encode(product.getProductName(), "UTF-8") %>">
+                                        <button type="submit" class="card-action-btn" aria-labelledby="card-label-1">
+                                            <ion-icon name="cart-outline"></ion-icon>
+                                        </button>
+                                    </form>
+                                    <div class="card-action-tooltip" id="card-label-1">Add to Cart</div>
+                                </li>
 
                             <%
                                 // Fetch user object from ServletContext
@@ -522,7 +247,7 @@
                         </div>
 
                         <h3 class="h3 card-title">
-                            <a href="#"><%=product.getProductName()%>
+                            <a name="productName" href="#"><%=product.getProductName()%>
                             </a>
                         </h3>
 
@@ -533,6 +258,7 @@
 
                 </div>
             </li>
+
             <%
                 }
 
@@ -739,12 +465,13 @@
 
 </footer>
 <script>
-    function sendToAddToCartServlet(productId) {
+    function sendToAddToCartServlet(productId, productName) {
         // Perform any custom logic before navigation (e.g., AJAX, logging, etc.)
         console.log('Sending product ID to servlet: ' + productId);
+        console.log(productName)
 
         // Redirect to the servlet and pass the product ID as a query parameter
-        window.location.href = 'addToCard?productId=' + encodeURIComponent(productId);
+        window.location.href = 'addToCard?productId=' + encodeURIComponent(productId) + '&productName=' + encodeURIComponent(productName);
     }
 </script>
 

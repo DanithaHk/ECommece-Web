@@ -116,13 +116,16 @@
 
 
         <li>
+
           <button class="nav-action-btn" id="btnCard">
             <ion-icon name="bag-outline" aria-hidden="true"></ion-icon>
             <data class="nav-action-text"   value="318.00">cart</data>
 
 
           </button>
+          </form>
         </li>
+
         <li>
           <button class="nav-action-btn" id="btnAddCatagory"data-bs-toggle="modal"
                   data-bs-target="#studentModal">
