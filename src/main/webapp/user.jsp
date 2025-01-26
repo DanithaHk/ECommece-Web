@@ -1,4 +1,5 @@
-<%--
+<%@ page import="lk.ijse.ecommeceweb.DTO.UserDto" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: User
   Date: 1/25/2025
@@ -61,7 +62,7 @@
     <a class="navbar-brand" href="#">
       Aduwata.lk
     </a>
-
+  </div>
 </nav>
 <div class="container-fluid">
   <div class="row">
@@ -110,7 +111,26 @@
       </div>
     </nav>
     <main class="col-md-9 ml-sm-auto col-lg-10 px-md-4 py-4">
-
+      <%
+        String message = request.getParameter("message");
+        if (message != null && !message.isEmpty()) {
+      %>
+      <script>
+        alert("<%= message %>");
+      </script>
+      <%
+        }
+      %>
+      <%
+        String error = request.getParameter("error");
+        if (error != null) {
+      %>
+      <script>
+        alert("<%= error %>");
+      </script>
+      <%
+        }
+      %>
 
       <div class="row">
         <div class="col-12 col-xl-8 mb-4 mb-lg-0">
@@ -118,7 +138,10 @@
             <h5 class="card-header">Users</h5>
             <div class="card-body">
               <div class="table-responsive">
-                <% List<UserDto> users = (List<UserDto>) request.getAttribute("users"); %>
+                <% List<UserDto> users = (List<UserDto>) request.getAttribute("userDtoList");
+                if(users!= null && !users.isEmpty()){
+               %>
+
                 <table class="table">
                   <thead>
                   <tr>
@@ -126,48 +149,52 @@
                     <th scope="col">Name</th>
                     <th scope="col">email</th>
                     <th scope="col">role</th>
-                    <th scope="col">Qty</th>
+
                     <th scope="col">is_active</th>
 
                     <th scope="col"></th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <th scope="row">17371705</th>
-                    <td>Volt Premium Bootstrap 5 Dashboard</td>
-                    <td>johndoe@gmail.com</td>
-                    <td>€61.11</td>
-                    <td>€61.11</td>
-                    <td>€61.11</td>
+                  <%
+                for (UserDto user : users) {
 
-                    <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">17370540</th>
-                    <td>Pixel Pro Premium Bootstrap UI Kit</td>
-                    <td>jacob.monroe@company.com</td>
-                    <td>$153.11</td>
-                    <td>€61.11</td>
-                    <td>€61.11</td>
+                  %>
+                   <tr>
+                          <th scope="row"><%=user.getUserId()%></th>
+                          <td><%=user.getName()%></td>
+                          <td><%=user.getEmail()%></td>
+                          <td><%=user.getRole()%></td>
+                          <td><%=user.isActive()%></td>
 
-                    <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">17371705</th>
-                    <td>Volt Premium Bootstrap 5 Dashboard</td>
-                    <td>johndoe@gmail.com</td>
-                    <td>€61.11</td>
-                    <td>€61.11</td>
-                    <td>€61.11</td>
+                     <td>
+                       <form id="deactivateUserForm" action="/EcommeceWeb_war_exploded/deactivateUser" method="POST" style="display:none;">
+                         <input type="hidden" name="userId" value="<%=user.getUserId()%>"  > <!-- Pass any required data -->
+                       </form>
+                       <button class="btn btn-warning btn-sm" onclick="document.getElementById('deactivateUserForm').submit();">
+                         Deactivate User
+                       </button>
+                       <form id="deleteUserForm" action="/EcommeceWeb_war_exploded/deleteUser" method="POST" style="display:none;">
+                         <input type="hidden" name="userId"  value="<%=user.getUserId()%>"> <!-- Pass any required data -->
+                       </form>
 
-                    <td><a href="#" class="btn btn-sm btn-primary">View</a></td>
-                  </tr>
-
+                       <button  class="btn btn-danger btn-sm" onclick="confirmDeletion();">
+                         Delete User
+                       </button>
+                     </td>
+                   </tr>
+                  <%
+                    }
+                  %>
                   </tbody>
                 </table>
+
+                <% } else { %>
+                <p>No products found.</p>
+                <% } %>
               </div>
-              <a href="#" class="btn btn-block btn-light">View all</a>
+
+
             </div>
             <button type="button" class="btn btn-primary mb-3 me-2 " data-bs-toggle="modal"
                     data-bs-target="#studentModal">
@@ -230,6 +257,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+  function confirmDeletion() {
+    if (confirm("Are you sure you want to delete this user?")) {
+      document.getElementById('deleteUserForm').submit();
+    }
+  }
+</script>
 </body>
 </html>
