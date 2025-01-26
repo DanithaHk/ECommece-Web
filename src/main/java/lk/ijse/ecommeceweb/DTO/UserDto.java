@@ -1,9 +1,5 @@
 package lk.ijse.ecommeceweb.DTO;
 
-import jakarta.persistence.*;
-
-import javax.management.relation.Role;
-
 public class UserDto {
    private String userId;
    private String name;
@@ -21,7 +17,7 @@ public class UserDto {
         this.active = active;
     }
 
-    public UserDto() {
+    public UserDto(String id, String name, String email, String password, String role, int isactive) {
     }
 
     public String getUserId() {

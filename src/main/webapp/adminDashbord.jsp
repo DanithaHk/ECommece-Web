@@ -10,9 +10,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5 Simple Admin Dashboard</title>
+    <title> Admin Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <style>
         .sidebar {
             position: fixed;
@@ -59,7 +61,7 @@
         <a class="navbar-brand" href="#">
             Aduwata.lk
         </a>
-
+    </div>
 </nav>
 <div class="container-fluid">
     <div class="row">
@@ -67,7 +69,7 @@
             <div class="position-sticky">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="#">
+                        <a class="nav-link active " aria-current="page" href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                             <span class="ml-2">Dashboard</span>
                         </a>
@@ -79,19 +81,19 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#">
+                        <a class="nav-link " href="catagory.jsp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
                             <span class="ml-2">Catogary</span>
                         </a>
                     </li>
                     <li class="nav-item  ">
-                        <a class="nav-link " href="#">
+                        <a class="nav-link " href="product.jsp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
                             <span class="ml-2">Product</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link " href="user.jsp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
                             <span class="ml-2">users</span>
                         </a>
@@ -188,27 +190,19 @@
                                     <input type="text" class="form-control" name="productName" id="name">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="description" class="form-label">description</label>
-                                    <input type="text" class="form-control" name="description" id="description">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="unitPrice" class="form-label">Unit Price</label>
-                                    <input type="number" class="form-control" name="price" id="unitPrice">
+                                    <label for="password" class="form-label">Password</label>
+                                    <input type="password" class="form-control" name="price" id="password">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="quntaty" class="form-label">Quntaty</label>
-                                    <input type="number" class="form-control" name="quantity" id="quntaty">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="categoryID" class="form-label">Catagary ID</label>
-                                    <input type="number" class="form-control" name="categoryID" id="categoryID">
+                                    <label for="confirmPassword" class="form-label"> Confirm Password</label>
+                                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
                                 </div>
 
-                                <div class="mb-3">
-                                    <label for="img" class="form-label">Attach Product Image</label>
-                                    <input type="file"  class="form-control" name="url" id="img" required/>
-                                </div>
-                                <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure Do you want to add this product?');">Add Product</button>
+                                <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure Do you want to add this Admin?');">Add Admin</button>
                             </form>
                         </div>
                     </div>
@@ -234,6 +228,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
 </body>

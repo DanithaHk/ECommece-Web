@@ -89,10 +89,16 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 
             if (dbEmail.equals(email) && dbPassword.equals(password)) {
                 UserDto user = new UserDto(dbUserId,dbName,dbEmail,dbPassword,dbRole,Boolean.parseBoolean(dbActive));
+                if (user.getRole().equals("admin")) {
+                    String alertMessage = "Login successfully!";
+                    response.sendRedirect("adminDashbord.jsp?message=" + URLEncoder.encode(alertMessage, "UTF-8"));
+                }else {
+                    String alertMessage = "Login successfully!";
+                    response.sendRedirect("index.jsp?message=" + URLEncoder.encode(alertMessage, "UTF-8"));
+                }
                 request.getServletContext().setAttribute("user",user);
                 System.out.println(user.getEmail());
-                String alertMessage = "User saved successfully!";
-                response.sendRedirect("index.jsp?message=" + URLEncoder.encode(alertMessage, "UTF-8"));
+
             } else {
                 String alertMessage = "login failed!";
                 response.sendRedirect("login.jsp?error="+URLEncoder.encode(alertMessage, "UTF-8"));

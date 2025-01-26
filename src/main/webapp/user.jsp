@@ -14,6 +14,7 @@
   <title>Bootstrap 5 Simple Admin Dashboard</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     .sidebar {
       position: fixed;
@@ -117,6 +118,7 @@
             <h5 class="card-header">Users</h5>
             <div class="card-body">
               <div class="table-responsive">
+                <% List<UserDto> users = (List<UserDto>) request.getAttribute("users"); %>
                 <table class="table">
                   <thead>
                   <tr>
@@ -171,7 +173,7 @@
                     data-bs-target="#studentModal">
               Add New Admin
             </button>
-            <button type="button" class="btn btn-primary mb-3 text-end" >
+            <button type="button"  class="btn btn-primary mb-3 text-end" onclick="window.location.href='/EcommeceWeb_war_exploded/addAdmin';" >
               All users
             </button>
           </div>
@@ -183,33 +185,25 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="container m-2">
-              <form action="product" method="post" >
+              <form action="addAdmin" method="post" >
                 <div class="mb-3">
                   <label for="name" class="form-label">Name</label>
-                  <input type="text" class="form-control" name="productName" id="name">
+                  <input type="text" class="form-control" name="name" id="name">
                 </div>
                 <div class="mb-3">
-                  <label for="description" class="form-label">description</label>
-                  <input type="text" class="form-control" name="description" id="description">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" name="email" id="email">
                 </div>
                 <div class="mb-3">
-                  <label for="unitPrice" class="form-label">Unit Price</label>
-                  <input type="number" class="form-control" name="price" id="unitPrice">
+                  <label for="password" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" id="password">
                 </div>
                 <div class="mb-3">
-                  <label for="quntaty" class="form-label">Quntaty</label>
-                  <input type="number" class="form-control" name="quantity" id="quntaty">
-                </div>
-                <div class="mb-3">
-                  <label for="categoryID" class="form-label">Catagary ID</label>
-                  <input type="number" class="form-control" name="categoryID" id="categoryID">
+                  <label for="confirmPassword" class="form-label"> Confirm Password</label>
+                  <input type="password" class="form-control" name="confirmPassword" id="confirmPassword">
                 </div>
 
-                <div class="mb-3">
-                  <label for="img" class="form-label">Attach Product Image</label>
-                  <input type="file"  class="form-control" name="url" id="img" required/>
-                </div>
-                <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure Do you want to add this product?');">Add Product</button>
+                <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure Do you want to add this Admin?');">Add Admin</button>
               </form>
             </div>
           </div>
@@ -235,7 +229,7 @@
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
