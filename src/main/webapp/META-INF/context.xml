@@ -8,10 +8,10 @@
             url="jdbc:mysql://localhost:3306/ecommerce"
             username="root"
             password="Ijse@123"
-            maxTotal="10"
-            maxIdle="10"
-            minIdle="5"
+            maxTotal="50"
+            maxIdle="20"
+            minIdle="10"
             initialSize="10"
-            maxWaitMillis="10000"
+            maxWaitMillis="30000"
     />
 </Context>

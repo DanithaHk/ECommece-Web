@@ -101,9 +101,7 @@
 
 
                     <li class="nav-item">
-                        <button class="btn btn-sm btn-danger ml-3 mt-2">
-                            Log Out
-                        </button>
+                        <a class="nav-link bg-danger text-white w-50 ms-2 rounded" href="login.jsp">LOG OUT</a>
 
                     </li>
                 </ul>

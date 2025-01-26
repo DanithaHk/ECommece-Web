@@ -75,7 +75,7 @@
             <ul class="navbar-list">
 
                 <li class="navbar-item">
-                    <a href="#" class="navbar-link">Home</a>
+                    <a href="index.jsp" class="navbar-link">Home</a>
                 </li>
 
                 <li class="navbar-item">

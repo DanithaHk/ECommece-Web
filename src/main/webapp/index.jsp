@@ -90,9 +90,7 @@
           <a href="contact.jsp" class="navbar-link">Contact</a>
         </li>
 
-        <li class="navbar-item">
-          <a href="product.jsp" class="navbar-link">Products</a>
-        </li>
+
 
       </ul>
 
@@ -126,15 +124,7 @@
           </form>
         </li>
 
-        <li>
-          <button class="nav-action-btn" id="btnAddCatagory"data-bs-toggle="modal"
-                  data-bs-target="#studentModal">
-            <ion-icon name="add-outline" aria-hidden="true" ></ion-icon>
-            <data class="nav-action-text"   value="318.00">Add Category</data>
 
-
-          </button>
-        </li>
 
       </ul>
 
@@ -178,29 +168,29 @@
 
 
 
-    <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="container m-2">
-            <form action="category" method="post" >
-              <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" name="name" id="name">
-              </div>
-              <div class="mb-3">
-                <label for="description" class="form-label">description</label>
-                <input type="text" class="form-control" name="description" id="description">
-              </div>
-              <div class="mb-3">
-                <label for="img" class="form-label">Attach Category Image</label>
-                <input type="file"  class="form-control" name="url" id="img" required/>
-              </div>
-              <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure Do you want to add this category?');">Add Category</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+<%--    <div class="modal fade" id="studentModal" tabindex="-1" aria-labelledby="studentModalLabel" aria-hidden="true">--%>
+<%--      <div class="modal-dialog">--%>
+<%--        <div class="modal-content">--%>
+<%--          <div class="container m-2">--%>
+<%--            <form action="category" method="post" >--%>
+<%--              <div class="mb-3">--%>
+<%--                <label for="name" class="form-label">Name</label>--%>
+<%--                <input type="text" class="form-control" name="name" id="name">--%>
+<%--              </div>--%>
+<%--              <div class="mb-3">--%>
+<%--                <label for="description" class="form-label">description</label>--%>
+<%--                <input type="text" class="form-control" name="description" id="description">--%>
+<%--              </div>--%>
+<%--              <div class="mb-3">--%>
+<%--                <label for="img" class="form-label">Attach Category Image</label>--%>
+<%--                <input type="file"  class="form-control" name="url" id="img" required/>--%>
+<%--              </div>--%>
+<%--              <button type="submit" class="btn btn-success" onclick="return confirm('Are you sure Do you want to add this category?');">Add Category</button>--%>
+<%--            </form>--%>
+<%--          </div>--%>
+<%--        </div>--%>
+<%--      </div>--%>
+<%--    </div>--%>
 
     <!--
       - #COLLECTION

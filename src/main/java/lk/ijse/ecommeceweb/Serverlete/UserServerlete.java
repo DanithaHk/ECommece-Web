@@ -87,7 +87,7 @@ public void doGet(HttpServletRequest request, HttpServletResponse response) thro
 
 
 
-            if (dbEmail.equals(email) && dbPassword.equals(password)) {
+            if (dbEmail.equals(email) && dbPassword.equals(password) ) {
                 UserDto user = new UserDto(dbUserId,dbName,dbEmail,dbPassword,dbRole,Boolean.parseBoolean(dbActive));
                 if (user.getRole().equals("admin")) {
                     String alertMessage = "Login successfully!";
